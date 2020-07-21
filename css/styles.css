@@ -472,7 +472,9 @@ mark,
   height: 220px;
   object-fit: cover;
 }
-
+.about-us{
+  font-weight: 200;
+}
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
