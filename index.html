@@ -17,14 +17,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
-<body id="page-top">
+<body id="page-top" >
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <h3 class="top-logo">Astrit Marleku</h3>
+                <h3 class="top-logo" data-aos="fade-up">Astrit Marleku</h3>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -32,7 +35,7 @@
                 Menu
                 <i class="fas fa-bars ml-1"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div data-aos="fade-up" class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
@@ -45,8 +48,8 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-subheading">WE BUILD SOFTWARE EXPERIENCES</div>
-            <div class="masthead-heading text-uppercase">We are a software development company offering best in class
+            <div class="masthead-subheading" data-aos="fade-up">WE BUILD SOFTWARE EXPERIENCES</div>
+            <div class="masthead-heading text-uppercase" data-aos="fade-up">We are a software development company offering best in class
                 solutions for leading brands and enterprises</div>
             <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
@@ -55,11 +58,11 @@
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Services</h2>
-                <h3 class="section-subheading text-muted">Here i can check some of our services</h3>
+                <h2 class="section-heading text-uppercase" data-aos="fade-up">Services</h2>
+                <h3 class="section-subheading text-muted" data-aos="fade-up">Here i can check some of our services</h3>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
@@ -71,7 +74,7 @@
                         WooCommerce, Shopify as well as solutions from providers such as Contentful, while applying
                         years of experience in HTML/CSS, Angular, JavaScript, etc.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
@@ -84,7 +87,7 @@
                         get the best frameworks possible to meet your business goals and satisfy your users’
                         expectations. Our competence on the backend side includes:</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up">
                     <span class="fa-stack fa-4x">
                         <i class="fas fa-circle fa-stack-2x text-primary"></i>
                         <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
@@ -99,7 +102,7 @@
         </div>
     </section>
     <!-- Portfolio Grid-->
-    <section class="page-section bg-light" id="portfolio">
+    <section class="page-section bg-light" id="portfolio" data-aos="fade-up">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Portfolio</h2>
@@ -114,7 +117,7 @@
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/validata.png" alt="" />
                         </a>
-                        <div class="portfolio-caption">
+                        <div data-aos="fade-up" class="portfolio-caption">
                             <div class="portfolio-caption-heading">Sense AI</div>
                             <div class="portfolio-caption-subheading text-muted">Software</div>
                         </div>
@@ -129,7 +132,7 @@
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/thelobyboy.png" alt="" />
                         </a>
-                        <div class="portfolio-caption">
+                        <div data-aos="fade-up" class="portfolio-caption">
                             <div class="portfolio-caption-heading">The Lobby Boy</div>
                             <div class="portfolio-caption-subheading text-muted">Software</div>
                         </div>
@@ -142,10 +145,10 @@
     <section class="page-section" id="about">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">About</h2>
+                <h2 class="section-heading text-uppercase" data-aos="fade-up">About</h2>
             </div>
             <span>
-                <h5 class="about-us text-center">
+                <h5 data-aos="fade-up" class="about-us text-center">
                     Hi, I'm Astrit Marleku! <br> <br> A Behance awarded, Google certified Developer & UI Designer with
                     4+years.<br>
                     Highly skilled on Front-End Development specifically ES6, CSS Grid, Flexbox, Variables, Search
@@ -181,7 +184,7 @@
         </div>
     </div> -->
     <!-- Contact-->
-    <section class="page-section" id="contact">
+    <section class="page-section" id="contact" data-aos="fade-up">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Contact Us</h2>
@@ -276,6 +279,10 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
