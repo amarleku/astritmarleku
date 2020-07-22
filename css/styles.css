@@ -112,12 +112,16 @@ abbr[data-original-title] {
 .clients {
   background-color: #212529;
 }
+
 .clients-img {
   width: 100%;
-  height: auto;
-  object-fit: none;
+  height: auto !important;
+  object-fit: none !important;
 }
 
+.partners{
+  color: white !important;
+}
 address {
   margin-bottom: 1rem;
   font-style: normal;
