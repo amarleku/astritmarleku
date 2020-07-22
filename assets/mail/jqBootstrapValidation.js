@@ -121,9 +121,6 @@
               $this.data("validationMaxlengthMessage", message);
               $this.data("validationMaxlengthMaxlength", $this.attr("maxlength"));
             }
-            // ---------------------------------------------------------
-            //                                                 MINLENGTH
-            // ---------------------------------------------------------
             if ($this.attr("minlength") !== undefined) {
               message = "Too short: Minimum of '" + $this.attr("minlength") + "' characters<!-- data-validation-minlength-message to override -->";
               if ($this.data("validationMinlengthMessage")) {
@@ -132,9 +129,6 @@
               $this.data("validationMinlengthMessage", message);
               $this.data("validationMinlengthMinlength", $this.attr("minlength"));
             }
-            // ---------------------------------------------------------
-            //                                                  REQUIRED
-            // ---------------------------------------------------------
             if ($this.attr("required") !== undefined || $this.attr("aria-required") !== undefined) {
               message = settings.builtInValidators.required.message;
               if ($this.data("validationRequiredMessage")) {
@@ -142,9 +136,6 @@
               }
               $this.data("validationRequiredMessage", message);
             }
-            // ---------------------------------------------------------
-            //                                                    NUMBER
-            // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "number") {
               message = settings.builtInValidators.number.message;
               if ($this.data("validationNumberMessage")) {
@@ -152,9 +143,6 @@
               }
               $this.data("validationNumberMessage", message);
             }
-            // ---------------------------------------------------------
-            //                                                     EMAIL
-            // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
               message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
@@ -164,9 +152,6 @@
               }
               $this.data("validationValidemailMessage", message);
             }
-            // ---------------------------------------------------------
-            //                                                MINCHECKED
-            // ---------------------------------------------------------
             if ($this.attr("minchecked") !== undefined) {
               message = "Not enough options checked; Minimum of '" + $this.attr("minchecked") + "' required<!-- data-validation-minchecked-message to override -->";
               if ($this.data("validationMincheckedMessage")) {
@@ -175,9 +160,6 @@
               $this.data("validationMincheckedMessage", message);
               $this.data("validationMincheckedMinchecked", $this.attr("minchecked"));
             }
-            // ---------------------------------------------------------
-            //                                                MAXCHECKED
-            // ---------------------------------------------------------
             if ($this.attr("maxchecked") !== undefined) {
               message = "Too many options checked; Maximum of '" + $this.attr("maxchecked") + "' required<!-- data-validation-maxchecked-message to override -->";
               if ($this.data("validationMaxcheckedMessage")) {
@@ -187,10 +169,6 @@
               $this.data("validationMaxcheckedMaxchecked", $this.attr("maxchecked"));
             }
           }
-
-          // =============================================================
-          //                                       COLLECT VALIDATOR NAMES
-          // =============================================================
 
           // Get named validators
           if ($this.data("validation") !== undefined) {
@@ -205,9 +183,6 @@
             }
           });
 
-          // =============================================================
-          //                                     NORMALISE VALIDATOR NAMES
-          // =============================================================
 
           var validatorNamesToInspect = validatorNames;
           var newValidatorNamesToInspect = [];
@@ -248,15 +223,8 @@
             validatorNamesToInspect = newValidatorNamesToInspect;
 
           } while (validatorNamesToInspect.length > 0)
-
-          // =============================================================
-          //                                       SET UP VALIDATOR ARRAYS
-          // =============================================================
-
           var validators = {};
-
           $.each(validatorNames, function (i, el) {
-            // Set up the 'override' message
             var message = $this.data("validation" + el + "Message");
             var hasOverrideMessage = (message !== undefined);
             var foundValidator = false;
@@ -324,11 +292,6 @@
               $.error("Cannot find validation info for '" + el + "'");
             }
           });
-
-          // =============================================================
-          //                                         STORE FALLBACK VALUES
-          // =============================================================
-
           $helpBlock.data(
             "original-contents",
             (
@@ -365,9 +328,6 @@
             )
           );
 
-          // =============================================================
-          //                                                    VALIDATION
-          // =============================================================
 
           $this.bind(
             "validation.validation",
@@ -375,7 +335,6 @@
 
               var value = getValue($this);
 
-              // Get a list of the errors to apply
               var errorsFound = [];
 
               $.each(validators, function (validatorType, validatorTypeArray) {
@@ -399,9 +358,6 @@
             }
           );
 
-          // =============================================================
-          //                                             WATCH FOR CHANGES
-          // =============================================================
           $this.bind(
             "submit.validation",
             function () {
@@ -874,12 +830,6 @@
     return new RegExp("^" + inputstring + "$");
   }
 
-  /**
-   * Thanks to Jason Bunting via StackOverflow.com
-   *
-   * http://stackoverflow.com/questions/359788/how-to-execute-a-javascript-function-when-i-have-its-name-as-a-string#answer-359910
-   * Short link: http://tinyurl.com/executeFunctionByName
-   **/
   function executeFunctionByName(functionName, context /*, args*/) {
     var args = Array.prototype.slice.call(arguments).splice(2);
     var namespaces = functionName.split(".");
