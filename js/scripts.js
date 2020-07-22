@@ -1,4 +1,3 @@
-
 (function ($) {
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
