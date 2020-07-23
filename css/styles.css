@@ -122,6 +122,10 @@ abbr[data-original-title] {
 .partners{
   color: white !important;
 }
+.full-image{
+  width: auto !important;
+  height: auto !important;
+}
 address {
   margin-bottom: 1rem;
   font-style: normal;
