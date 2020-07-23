@@ -115,7 +115,6 @@ abbr[data-original-title] {
 
 .clients-img {
   width: 100%;
-  height: auto !important;
   object-fit: none !important;
 }
 
